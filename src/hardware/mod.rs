@@ -13,7 +13,6 @@ pub fn execute_program(vm: &mut VM) {
     while vm.registers.pc < MEMORY_SIZE as u16 {
         //read instruction
         let instruction = vm.read_memory(vm.registers.pc);
-
         //increment program counter
         vm.registers.pc += 1;
 
